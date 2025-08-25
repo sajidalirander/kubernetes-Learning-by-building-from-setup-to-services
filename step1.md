@@ -1,10 +1,3 @@
-### Step 1: Prepare Your Node and Install Containerd
-The very first step is to prepare your server (which we'll call a "node") by installing a container runtime.
-
-Kubernetes is a container orchestrator, which means it doesn't run containers itself. Instead, it tells a container runtime what to do. The most common runtime used with Kubernetes today is containerd.
-
-This step ensures your system has the necessary software to run containers and is configured correctly for Kubernetes. We'll use a standard Ubuntu/Debian setup for this guide.
-
 1. Prepare the System
 
 First, run these commands to prepare your system's networking and package manager. This enables required kernel modules and makes sure traffic is correctly routed for Kubernetes.
