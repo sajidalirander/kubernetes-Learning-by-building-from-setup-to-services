@@ -100,7 +100,8 @@ kubectl get pods
 ## Case Study
 ```bash
 sajid@sajid:~$ kubectl get pods 
-NAME                                READY   STATUS    RESTARTS   AGE minio-deployment-69849b9879-42cg6   0/1     Pending   0          7m11s
+NAME                                READY   STATUS    RESTARTS   AGE 
+minio-deployment-69849b9879-42cg6   0/1     Pending   0          7m11s
 ```
 
 That's a very common status to see when a pod is first created. The `Pending` status means Kubernetes has accepted your `Deployment`, but it hasn't been able to start the container on a node yet.
