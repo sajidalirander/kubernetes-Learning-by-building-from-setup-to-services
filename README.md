@@ -4,7 +4,7 @@ Building a complete, stateful application stack from scratch.
 ## Step 0: Compatibility criteria
 Before we install the main Kubernetes components, it's smart to confirm that your server meets the minimum requirements.
 
-A Kubernetes cluster needs at least one control-plane node (the brains 🧠 of the operation) and usually one or more worker nodes (where your applications will run). The control-plane node has slightly higher requirements.
+A Kubernetes cluster needs at least one control-plane node (the brains of the operation) and usually one or more worker nodes (where your applications will run). The control-plane node has slightly higher requirements.
 
 Follow the instructions at [STEP 0](./setup/step0.md).
 

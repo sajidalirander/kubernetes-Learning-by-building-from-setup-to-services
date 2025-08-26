@@ -1,4 +1,4 @@
-At this point, I need some clarification before going to further. I want to you to know the difference between cluster and nodes.
+At this point, some clarification is needed before going to further. I want you to know the difference between cluster and nodes.
 
 Think of a cluster not as a single PC, but as a team of players working together. It's the entire Kubernetes environment, working as one coordinated system.
 
