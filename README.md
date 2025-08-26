@@ -24,3 +24,10 @@ Ensuring a clean slate before a big installation like this can prevent a lot of 
 Let's do this methodically. We'll first search for the main Kubernetes components and then, if we find any, we'll remove them.
 
 Follow the instructions at [STEP 2](./step2.md).
+
+
+### Step 3: Install Kubernetes Tools
+We're going to install the same three tools we removed in `step 2` (kubeadm, kubelet, and kubectl) by getting the latest stable versions.
+
+Follow the instructions at [STEP 3](./step3.md).
+
