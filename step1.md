@@ -1,4 +1,4 @@
-1. Prepare the System
+## 1. Prepare the System
 
 First, run these commands to prepare your system's networking and package manager. This enables required kernel modules and makes sure traffic is correctly routed for Kubernetes.
 
@@ -23,7 +23,7 @@ EOF
 sudo sysctl --system
 ```
 
-2. Install containerd
+## 2. Install containerd
 
 Next, we'll install the containerd software itself.
 
@@ -47,7 +47,7 @@ sudo apt-get update
 sudo apt-get install -y containerd.io
 ```
 
-3. Configure containerd
+## 3. Configure containerd
 
 Finally, we need to create a configuration file for containerd and make one important change. Kubernetes works best when its components and the container runtime use the same method for managing resources, called a `"cgroup driver"`. We'll set containerd to use the systemd driver.
 

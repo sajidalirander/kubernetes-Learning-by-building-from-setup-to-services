@@ -31,3 +31,11 @@ We're going to install the same three tools we removed in `step 2` (kubeadm, kub
 
 Follow the instructions at [STEP 3](./step3.md).
 
+So far, we've installed the necessary Kubernetes tools (kubeadm, kubelet, and kubectl), and we've put a hold on them to prevent accidental upgrades.
+
+Now, we're ready to initialize the cluster. 
+
+
+### Step 4: Initialize the Kubernetes Control Plane
+This is the big step where we actually create the cluster. We'll use the kubeadm tool to set up all the necessary components for the control plane—the brain of your cluster.
+
