@@ -15,6 +15,6 @@ Here's the plan:
     * Create the `PersistentVolume` (PV) by telling Kubernetes about this directory.
     * Deploy MinIO with a `PersistentVolumeClaim` (PVC) to request and use that PV.
 * Deploy MinIO using its official container image. We'll create a `Deployment` to manage the MinIO pod. Let's dive in and [Run MinIO Pods](../minio/build/deploy_minio.md).
-* and a `Service` to give it a stable network address inside the cluster (like minio-service:9090).
+* a `Service` to give it a stable network address inside the cluster (like minio-service:9090). Read the next lesson to create a [Kubernetes Service](../minio/build/service.md) to expose it. 
 
 This approach keeps everything managed by Kubernetes and prepares you to connect your Python code to it later.

@@ -119,3 +119,20 @@ Think of it like this: in a school, there might be a student and a teacher both 
 
 It's the same in Kubernetes. We need to tell describe what kind of object it's looking for. The right and singluar object name is `pod` here. 
 
+The description of the minio-deployment pod is as follows: 
+
+```bash
+The container creation is failed. 
+Events:   
+Type     Reason            Age                   From               Message   
+----     ------            ----                  ----               -------   
+Warning  FailedScheduling  11m                   default-scheduler  0/1 nodes are available: 1 node(s) had untolerated taint {node-role.kubernetes.io/control-plane: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.   Warning  FailedScheduling  110s (x2 over 6m50s)  default-scheduler  0/1 nodes are available: 1 node(s) had untolerated taint {node-role.kubernetes.io/control-plane: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling
+```
+
+The Events section tells us the story of `taint`. Read the [whole story and resolve](../utils/taint.md) the issue. 
+
+You've successfully:
+* Created a Secret to hold the credentials.
+* Set up Persistent Storage so the data won't be lost.
+* Created a Deployment to run the application.
+* There's just one last step. Even though the pod is running, we can't access it from outside the cluster yet. We need to create a Kubernetes Service to expose it.
