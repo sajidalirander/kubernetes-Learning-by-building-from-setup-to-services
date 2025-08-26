@@ -49,7 +49,7 @@ sudo apt-get install -y containerd.io
 
 3. Configure containerd
 
-Finally, we need to create a configuration file for containerd and make one important change. Kubernetes works best when its components and the container runtime use the same method for managing resources, called a "cgroup driver". We'll set containerd to use the systemd driver.
+Finally, we need to create a configuration file for containerd and make one important change. Kubernetes works best when its components and the container runtime use the same method for managing resources, called a `"cgroup driver"`. We'll set containerd to use the systemd driver.
 
 ```bash
 # Create the default configuration file

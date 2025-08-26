@@ -1,4 +1,4 @@
-# Kubernetes-Learning-by-building
+# Kubernetes learning by building from setup to services
 Building a complete, stateful application stack from scratch.
 
 ### Step 0: Compatibility criteria
@@ -17,3 +17,10 @@ This step ensures your system has the necessary software to run containers and i
 
 Follow the instructions at [STEP 1](./step1.md).
 
+
+### Step 2: Check for and Remove Old Installations
+Ensuring a clean slate before a big installation like this can prevent a lot of headaches later. It's always best practice to check for and remove any old or incomplete installations.
+
+Let's do this methodically. We'll first search for the main Kubernetes components and then, if we find any, we'll remove them.
+
+Follow the instructions at [STEP 2](./step2.md).
