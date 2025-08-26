@@ -73,5 +73,5 @@ Unlike a simple web server, these applications need to save data permanently. We
 
 Here's how we can tackle it:
 * First, we'll quickly discuss Persistent Volumes—how Kubernetes saves data even if a pod restarts. Read the concept at [Chapter 2](./leason/ch2.md).
-* Then, we'll deploy MinIO, the object storage server.
-* Finally, we'll deploy PostgreSQL, the database.
+* Then, we'll deploy MinIO, the object storage server. Read the concept at [Chapter 3](./leason/ch3.md).
+* Finally, we'll deploy PostgreSQL, the database. Read the concept at [Chapter 4](./leason/ch4.md).
