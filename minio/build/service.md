@@ -28,7 +28,7 @@ nano minio-service.yaml
 
 Now, copy and paste this blueprint. It defines a `NodePort` service that listens on port `30627` on your server and forwards traffic to port `9090` on your MinIO pod, which is the port for the web console.
 
-File: [MinIO Service](../config/minio-seervice.yaml)
+File: [MinIO Service](../config/minio-service.yaml)
 ```yaml
 apiVersion: v1
 kind: Service
@@ -52,7 +52,7 @@ The selector is the mechanism that connects a `Service` to a `Deployment`.
 
 Think of it like this:
 * In our [MinIO Deployment](../config/minio-dep.yaml), we put a label on our pods that says `app: minio`.
-* Now, in our [MinIO Service](../config/minio-seervice.yaml), the `selector` says, "I'm looking for any pod with the `app: minio` label."
+* Now, in our [MinIO Service](../config/minio-service.yaml), the `selector` says, "I'm looking for any pod with the `app: minio` label."
 
 This is how the `Service` knows which pods to send traffic to. It's a simple but powerful way to link different Kubernetes objects together.
 

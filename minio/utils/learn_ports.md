@@ -1,5 +1,5 @@
 ## The Journey of a Request
-In [MinIO Service](../config/minio-seervice.yaml), We have: 
+In [MinIO Service](../config/minio-service.yaml), We have: 
 ```yaml
 ports: 
     - port: 9090 

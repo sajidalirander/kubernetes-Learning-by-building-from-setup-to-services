@@ -1,3 +1,4 @@
+## Pod Deployment
 We need a blueprint that tells Kubernetes how to run the MinIO pods. In Kubernetes, that blueprint is called a Deployment.
 
 A `Deployment` is like a manager for your pods. You tell it:
@@ -15,7 +16,7 @@ This file is the most complex one yet, but you'll see it's built from concepts w
 First, create the new file in your editor:
 
 ```bash
-nano minio-deployment.yaml
+nano minio-dep.yaml
 ```
 Now, copy and paste this blueprint into the editor. Take a moment to read through it and see how the pieces connect.
 
@@ -82,7 +83,7 @@ The volume would be attached to the pod, but since we didn't mount it, the conta
 Go ahead, save the file, and apply it.
 
 ```bash
-kubectl apply -f minio-deployment.yaml
+kubectl apply -f minio-dep.yaml
 ```
 
 You've just handed the blueprint for `MinIO` to your cluster's manager. The `Deployment` will now start the process of creating the pod.

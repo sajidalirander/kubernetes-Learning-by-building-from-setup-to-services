@@ -12,7 +12,10 @@ kubectl create secret generic minio-secret \
   --from-literal=MINIO_ROOT_PASSWORD='admin123'
 ```
 
-Wait!! Is it good idea to create everything using terminal command? Can we do it using a script so that any modification can be handle easily?
+Wait!! 
+> Is it good idea to create everything using terminal command? 
+
+> Can we do it using a script so that any modification can be handle easily?
 
 So here we are. A core concept in modern infrastructure called `"Declarative vs. Imperative"` management.
 

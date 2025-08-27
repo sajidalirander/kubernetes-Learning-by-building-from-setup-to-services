@@ -67,6 +67,13 @@ The `PersistentVolumeClaim` (PVC) is the object a pod uses to formally request s
 
 So, to complete our storage setup, we need to create one last YAML file for the PVC. This will act as the bridge between our `PersistentVolume` and our future MinIO deployment.
 
+Now, create a new YAML file for our `PersistentVolumeClaim`.
+
+```bash
+nano minio-pvc.yaml
+```
+Copy and paste the following blueprint into the editor.
+
 File: [MinIO Persistent Volume Claim](../config/minio-pvc.yaml)
 ```yaml
 apiVersion: v1
