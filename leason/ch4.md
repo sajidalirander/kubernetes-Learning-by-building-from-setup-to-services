@@ -3,6 +3,6 @@ The process will feel very familiar, as we'll follow the same declarative, file-
 * A `Secret` for the database password. Read and follow the instruction carefully at [Creating Secret](../postgres/build/create_secret.md).
 * `Persistent Storage` (a PV and a PVC) for the database files. Set up the [Persistent Storage](../postgres/build/make_pv.md) so our database has a safe place to keep its data.
 * A `Deployment` to run the PostgreSQL container. Let's create and apply the YAML for the [PostgreSQL Deployment](../postgres/build/deploy_sql.md).
-* A `Service` to expose the database within the cluster.
+* A `Service` to expose the database within the cluster. Start it as a service and make it usable for other applications inside your cluster. We need to [Create a Service](../postgres/build/service.md).
 
 Just like with MinIO, the first step is to securely handle our credentials.
