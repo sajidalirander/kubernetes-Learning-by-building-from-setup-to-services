@@ -19,7 +19,7 @@ nano minio-deployment.yaml
 ```
 Now, copy and paste this blueprint into the editor. Take a moment to read through it and see how the pieces connect.
 
-File: [MinIO Secret](../config/minio-secret.yaml)
+File: [MinIO Deployment](../config/minio-dep.yaml)
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
