@@ -75,3 +75,25 @@ Here's how we can tackle it:
 * First, we'll quickly discuss Persistent Volumes—how Kubernetes saves data even if a pod restarts. Read the concept at [Chapter 2](./leason/ch2.md).
 * Then, we'll deploy MinIO, the object storage server. Read the concept at [Chapter 3](./leason/ch3.md).
 * Finally, we'll deploy PostgreSQL, the database. Read the concept at [Chapter 4](./leason/ch4.md).
+
+## What You've Accomplished
+Congratulations on building a complete, stateful application stack from scratch. You've successfully learned and implemented some of the most important concepts in Kubernetes:
+* `Declarative Management` using YAML files.
+* `Secrets` for managing credentials.
+* Persistent Storage with `PersistentVolumes` and `PersistentVolumeClaims`.
+* `Deployments` for running and managing your applications.
+* How to debug a `Pending` pod using `kubectl describe` and removing a `Taint`.
+* The difference between `NodePort` (for external access) and `ClusterIP` (for internal access) Services.
+
+## Final Remarks
+Let's do one final check. Run `kubectl get service` and take a look at the `TYPE` for both your `minio-service` and `postgres-service`.
+
+> What's the difference you see, and why is it important?
+
+```bash
+sajid@sajid:~$ kubectl get service
+NAME               TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes         ClusterIP   10.96.0.1        <none>        443/TCP          4d20h
+minio-service      NodePort    10.102.127.190   <none>        9090:30627/TCP   47h
+postgres-service   ClusterIP   10.111.9.184     <none>        5432/TCP         45h
+```
