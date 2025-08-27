@@ -67,7 +67,7 @@ spec:
 
 This file introduces a few new concepts, but one of the most important is the relationship between `volumes` and `volumeMounts`.
 
-Based on the YAML, what do you think is the difference between those two sections?
+> Based on the YAML, what do you think is the difference between those two sections?
 
 Let's use a simple analogy to make the distinction crystal clear:
 * `volumes`: This section is like declaring which backpack you're bringing into the pod. It says, "This pod has access to a source of storage, and we'll call it minio-storage." It defines the storage that is available to the pod as a whole.
@@ -75,7 +75,7 @@ Let's use a simple analogy to make the distinction crystal clear:
 
 So, a pod has volumes, but a container has volume mounts.
 
-What do you think would happen if we defined a `volume` in our pod but forgot to add the `volumeMounts` section inside the container?
+> What do you think would happen if we defined a `volume` in our pod but forgot to add the `volumeMounts` section inside the container?
 
 The volume would be attached to the pod, but since we didn't mount it, the container wouldn't know it's there. It would be like having the backpack in the pod but leaving it zipped up in a corner, completely inaccessible. The container would just use its own empty `/data` directory instead.
 
@@ -89,7 +89,7 @@ You've just handed the blueprint for `MinIO` to your cluster's manager. The `Dep
 
 This can take a minute or two as it has to download the minio/minio container image.
 
-What command would you use to check the status of your running pods and see if the MinIO pod is up and running?
+> What command would you use to check the status of your running pods and see if the MinIO pod is up and running?
 
 When you run `kubectl get` without specifying a namespace, it automatically looks in the default namespace. Go ahead and run:
 

@@ -85,7 +85,7 @@ http://localhost:30627
 
 Since your browser is running on the same machine as your Kubernetes node, `localhost` will work perfectly. If you were accessing it from another computer, you'd just replace `localhost` with your `server's IP address`.
 
-Go ahead and open that address in your browser. You should see the MinIO login screen. Use the credentials you chose (admin / admin123) to log in.
+Go ahead and open that address in your browser. You should see the MinIO login screen. Use the credentials you chose (admin / admin123 in this turorial) to log in.
 
 You've successfully deployed and exposed MinIO. Now for the final test: go to your web browser and try to access the MinIO console.
 

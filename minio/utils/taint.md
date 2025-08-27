@@ -28,7 +28,7 @@ So, the scheduler is saying, "I can't place your MinIO pod here because this nod
 
 In our small, single-node cluster, the control-plane node can pull double duty. We just need to give it permission to run regular workloads. We can do this by removing the "No Trespassing" sign—the taint. The command to do that is `kubectl taint nodes`. 
 
-Given that, and the taint information from the error message, how would you construct the full command to remove that specific taint from `sajid` node?
+> Given that, and the taint information from the error message, how would you construct the full command to remove that specific taint from `sajid` node?
 
 A taint has three parts: the key, the value, and the effect. The error message from kubectl describe gives us the whole thing:
 ```bash
@@ -58,6 +58,7 @@ Go ahead and run that command. Once it's done, check the status of your pods aga
 ```bash
 sajid@sajid:~$ kubectl taint nodes sajid node-role.kubernetes.io/control-plane:NoSchedule- 
 node/sajid untainted 
+
 sajid@sajid:~$ kubectl get pods 
 NAME                                READY   STATUS              RESTARTS   AGE 
 minio-deployment-69849b9879-42cg6   0/1     ContainerCreating   0          25m
@@ -67,7 +68,9 @@ The `node/sajid untainted` message confirms you've successfully removed the "No 
 
 `ContainerCreating` means the scheduler has placed the pod on your node, and now your node is in the process of downloading the `minio/minio` image and starting the container. This can take a minute or two.
 
-Run `kubectl get pods` again in a little while. What's the final STATUS you expect to see when it's ready?
+Run `kubectl get pods` again in a little while. 
+
+> What's the final STATUS you expect to see when it's ready?
 
 ```bash
 sajid@sajid:~$ kubectl get pods 

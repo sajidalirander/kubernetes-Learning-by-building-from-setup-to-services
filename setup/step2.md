@@ -30,15 +30,17 @@ To avoid any conflicts with a new installation, our best move is to remove those
 
 You can do this with a purge command, which is a bit stronger than a regular remove because it also deletes any system-wide configuration files associated with the packages.
 
-Could you run this command to clean everything up?
+> Could you run this command to clean everything up?
 ```bash
 # This will completely remove the three main Kubernetes packages
 sudo apt-get purge -y kubeadm kubelet kubectl
 ```
 
-After you run it, let's double-check that they're gone by running the first check command one more time: `which kubeadm kubelet kubectl`. What does it show now?
+After you run it, let's double-check that they're gone by running the first check command one more time: `which kubeadm kubelet kubectl`. 
 
-In case, if you are unable to remove the packages due to an error, such as: 
+> What does it show now?
+
+If the same case, you are unable to remove the packages due to an error, such as: 
 ```bash
 E: Held packages were changed and -y was used without --allow-change-held-packages.
 ```
@@ -46,7 +48,9 @@ In Linux package management, a held package is one that's been marked to prevent
 
 Adding `--allow-change-held-packages` to our command will tell the package manager that we intentionally want to remove these `"held"` packages.
 
-Go ahead and give that a try. What's the output when you run the modified command?
+Go ahead and give that a try. 
+
+> What's the output when you run the modified command?
 ```bash
 sudo apt-get purge -y kubeadm kubelet kubectl --allow-change-held-packages
 ```

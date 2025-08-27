@@ -43,11 +43,13 @@ data:
   MINIO_ROOT_PASSWORD: YWRtaW4xMjM=
 ```
 
-There's one tricky part in there. The values for the user and password look like random characters. Any idea why they aren't in plain text?
+There's one tricky part in there. The values for the user and password look like random characters. 
+
+> Any idea why they aren't in plain text?
 
 They're a type of encoding called Base64. Encoding is like translating a message into a different alphabet. It makes the data safe for transport over networks but can be easily translated back. Learn more about [encoding your own ID and password](../utils/base64_encoding.md).
 
-Why do you think Kubernetes requires the Secret's data to be encoded this way?
+> Why do you think Kubernetes requires the Secret's data to be encoded this way?
 
 The main reason Kubernetes uses Base64 is to handle special characters. Passwords and keys can sometimes contain characters that aren't compatible with the YAML format or certain network protocols.
 
@@ -74,7 +76,9 @@ To save the file in nano:
 > Alternative, press `Ctrl + o`, confirm file name by pressing `Enter`, and 'Ctrl+x` to exit.
 
 ### Step 4: Create the Secret
-Once that's done, you'll be back at your regular command prompt. Now, how do you think we tell Kubernetes to read this file and create the secret object?
+Once that's done, you'll be back at your regular command prompt. 
+
+> Now, how do you think we tell Kubernetes to read this file and create the secret object?
 
 The command to create things in Kubernetes is indeed `kubectl create`, but we can also use a more versatile command called `kubectl apply`.
 

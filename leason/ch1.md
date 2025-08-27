@@ -36,8 +36,8 @@ These are pods that provide extra cluster-level services:
 * `kube-proxy`: A networking component on every node that helps route traffic.
 * `kube-flannel`: The pod network you installed.
 
-Based on the pods you saw running on your node a moment ago (like etcd, kube-apiserver, kube-scheduler), which role is your current node playing?
+> Based on the pods you saw running on your node a moment ago (like etcd, kube-apiserver, kube-scheduler), which role is your current node playing?
 
 Because it's running all those core services in the kube-system namespace—especially the etcd database and the kube-apiserver—we know it's a control-plane node.
 
-You've got a great understanding of the architecture now. Shall we try deploying your very first application to your cluster?
+> You've got a great understanding of the architecture now. Shall we try deploying your very first application to your cluster?

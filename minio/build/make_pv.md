@@ -15,7 +15,7 @@ nano minio-pv.yaml
 ```
 Copy and paste the following blueprint into the editor. This YAML tells Kubernetes that the `/mnt/data` directory is available for use as a 5-gigabyte storage volume.
 
-File: [MinIO Secret](../config/minio-pv.yaml)
+File: [MinIO Persistent Volume](../config/minio-pv.yaml)
 ```yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -39,13 +39,13 @@ spec:
           values:
           - sajid
 ```
-Before you save, take a look at the last few lines. Any idea what the `nodeAffinity` section is for?
+> Before you save, take a look at the last few lines. Any idea what the `nodeAffinity` section is for?
 
 The `nodeAffinity` section is like a sticky note on the `Persistent Volume` that says, "This storage only exists on the node named `sajid`."
 
 Because we're using a simple directory on your server's hard drive `(/mnt/data)`, the data physically lives on that one machine. `nodeAffinity` tells Kubernetes that this PV is permanently "affiliated" with `sajid` node. This ensures that only pods scheduled on that specific node can use this storage.
 
-What do you think would happen if we didn't include this section and a new node tried to use this PV?
+> What do you think would happen if we didn't include this section and a new node tried to use this PV?
 
 It works exactly like user permissions in Linux. If a pod scheduled on a different node tried to access that PV, it would fail with an error. The cluster would essentially say, "Permission denied, this storage belongs exclusively to the `sajid` node."
 
@@ -67,7 +67,7 @@ The `PersistentVolumeClaim` (PVC) is the object a pod uses to formally request s
 
 So, to complete our storage setup, we need to create one last YAML file for the PVC. This will act as the bridge between our `PersistentVolume` and our future MinIO deployment.
 
-File: [MinIO Secret](../config/minio-pvc.yaml)
+File: [MinIO Persistent Volume Claim](../config/minio-pvc.yaml)
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim

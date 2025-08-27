@@ -1,3 +1,4 @@
+## Introduction
 Step 1 is all about getting your server's foundation ready before we build the Kubernetes house on top of it. Think of it like preparing the ground before you plant a garden. We need to make sure the soil is right and the plumbing is in place.
 
 That step had three main parts:
@@ -132,6 +133,8 @@ Let's look at the commands:
 
 So, this entire step is about getting your container runtime and Kubernetes on the same page for managing resources, preventing conflicts before they can start.
 
-That covers all three parts of the initial setup. We've prepared the networking, installed the container runtime, and configured it correctly. Does this complete picture of Step 1 make sense now?
+That covers all three parts of the initial setup. We've prepared the networking, installed the container runtime, and configured it correctly. 
+
+> Does this complete picture of Step 1 make sense now?
 
 A solid foundation makes the rest of the process much easier to understand.
