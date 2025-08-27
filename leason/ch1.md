@@ -1,3 +1,4 @@
+## Content of Pods
 The pods you see with `kubectl get pods` are only the ones in the default namespace. 
 
 To see all the pods, including the system ones you just created (like CoreDNS and Flannel), run this command:

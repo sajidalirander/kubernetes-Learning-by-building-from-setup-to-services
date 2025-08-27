@@ -1,3 +1,4 @@
+## MinIO Deployment and Service
 For MinIO to store its data, it needs to claim a `Persistent Volume`. In a production cloud environment, we'd use a `StorageClass` to create a cloud disk automatically. Since we're on a single node for learning, we'll create a simple PV by hand using a directory on your local server.
 
 To be clear, instead of connecting to an external MinIO cloud service, we'll deploy the official MinIO software inside our Kubernetes cluster. This way, we're still managing it with Kubernetes, but we're not tied to a specific local directory.

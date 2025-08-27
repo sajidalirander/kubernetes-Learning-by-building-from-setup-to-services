@@ -1,6 +1,6 @@
+## Understanding Persistent Data
 We'll start by tackling the most important concept for running stateful applications on Kubernetes: `persistent data`.
 
-## Understanding Persistent Data
 By default, a Kubernetes Pod is ephemeral (temporary). If a Pod crashes or is deleted, all the data inside it is lost forever. This is fine for a web server, but it's a disaster for a database.
 
 To solve this, Kubernetes uses a system of `Persistent Volumes`.
