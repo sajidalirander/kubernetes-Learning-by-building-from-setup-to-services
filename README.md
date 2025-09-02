@@ -1,3 +1,10 @@
+![Ubuntu 24.04](https://img.shields.io/badge/Ubuntu-24.04-E95420?logo=ubuntu&logoColor=white)
+
+![Kubernetes 1.30](https://img.shields.io/badge/Kubernetes-1.30-326CE5?logo=kubernetes&logoColor=white)
+
+![Kubeflow 1.10.0](https://img.shields.io/badge/Kubeflow-1.10.0-009688?logo=kubernetes&logoColor=white)
+
+
 # Kubernetes learning by building from setup to services
 Building a complete, stateful application stack from scratch.
 
