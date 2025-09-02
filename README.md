@@ -97,3 +97,24 @@ kubernetes         ClusterIP   10.96.0.1        <none>        443/TCP          4
 minio-service      NodePort    10.102.127.190   <none>        9090:30627/TCP   47h
 postgres-service   ClusterIP   10.111.9.184     <none>        5432/TCP         45h
 ```
+
+## KubeFlow
+1. The Big Picture: What & Why?
+
+    We'll start with the core concepts. What problems does Kubeflow solve? What are its most important components, like Kubeflow Pipelines (for workflows), Katib (for hyperparameter tuning), and KServe (for model serving)?
+
+2. Installation & The Dashboard
+
+    Next, we'll cover the prerequisites and the process for installing Kubeflow on your existing Kubernetes cluster. Once it's running, we'll take a tour of the central dashboard.
+
+3. Your First Workflow: Running an Example Pipeline
+
+    The best way to learn is by doing. We'll find a pre-built example pipeline and run it. This will show us how code, data, and artifacts flow through a real ML workflow.
+
+4. Building a Simple Pipeline from Scratch
+
+    With the basics covered, we'll write our own simple, two-step pipeline. This will solidify your understanding of how to define components and connect them.
+
+5. Connecting to Your Services: Using MinIO
+
+    Finally, we'll bring it all together. We'll modify our custom pipeline to use your existing MinIO service as an artifact store, which is where pipelines save their outputs (like datasets and models).
