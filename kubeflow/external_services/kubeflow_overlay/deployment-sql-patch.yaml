@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-pipeline
+spec:
+  template:
+    spec:
+      containers:
+        - name: ml-pipeline-api-server
+          env:
+            # We are overriding the default database variables
+            - name: MYSQL_HOST
+              value: "postgres-service.default" # Our external DB host
+            - name: MYSQL_PORT
+              value: "5432"
+            - name: MYSQL_DATABASE
+              value: "your_db_name" # The name of the database
+            - name: MYSQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials # The name of our Secret
+                  key: POSTGRES_USER # The key inside the Secret
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials # The name of our Secret
+                  key: POSTGRES_PASSWORD # The key inside the Secret

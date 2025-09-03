@@ -8,4 +8,5 @@ spec:
   resources:
     requests:
       storage: 10Gi
+  volumeName: postgres-pv
   storageClassName: local-storage

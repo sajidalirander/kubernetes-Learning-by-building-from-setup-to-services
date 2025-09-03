@@ -19,4 +19,4 @@ def my_first_pipeline(recipient: str = 'World'):
 if __name__ == '__main__':
     from kfp import compiler
     filename_no_ext = os.path.splitext(os.path.basename(__file__))[0].replace("_", "-")
-    compiler.Compiler().compile(my_first_pipeline, f'./kubeflow/kfp-yaml/{filename_no_ext}-pipeline.yaml')
+    compiler.Compiler().compile(my_first_pipeline, f'./kubeflow/kfp_yaml/{filename_no_ext}-pipeline.yaml')
