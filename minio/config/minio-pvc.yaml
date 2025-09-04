@@ -2,12 +2,13 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: minio-pvc
+  namespace: data
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi
-  volumeName: minio-pv
-  storageClassName: local-storage
-  
+      storage: 20Gi  # Size of the persistent volume
+  # storageClassName: local-storage  # Ties it to dynamic storage provisioner
+  storageClassName: local-path   # <-- matches your default dynamic class 
+  # ---Option B (omit the field to use the default):
